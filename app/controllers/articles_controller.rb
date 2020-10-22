@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   http_basic_authenticate_with name: (ENV["APPLICATION_USER"].blank? ? 'test' : ENV['APPLICATION_USER']), password: (ENV["APPLICATION_PASSWORD"].blank? ? 'test' : ENV["APPLICATION_PASSWORD"]), except: [:index, :show]
 
   before_action :set_article, only: [:show, :edit, :update, :destroy]
