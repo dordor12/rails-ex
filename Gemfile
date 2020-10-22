@@ -36,8 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'listen', '>= 3.0.5', '< 3.2'
-gem 'redis'
-gem 'redis-store'
+gem "redis", "~> 4.0"
+gem 'redis-rails', '~> 5'
 gem 'redis-rails'
 
 group :development, :test do
