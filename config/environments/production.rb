@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'],password: ENV['REDIS_PASSWORD']}
+  config.cache_store = :redis_store, { url: ENV['REDIS_URL'],password: ENV['REDIS_PASSWORD']}
   # Code is not reloaded between requests.
   config.cache_classes = true
 
