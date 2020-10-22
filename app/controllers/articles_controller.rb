@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-    Rails.cache.write(@article.id,@article.title)
+    Rails.cache.write(@article.title,@article.body)
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
